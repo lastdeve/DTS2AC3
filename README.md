@@ -1,4 +1,4 @@
-# DTS2AC3Converter
+# DTS2AC3
 
 This is a simple graphical user interface (GUI) application for converting DTS audio tracks in MKV files to AC3 audio tracks using the FFmpeg library. 
 

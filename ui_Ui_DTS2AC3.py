@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'Ui_DTS2AC3.ui'
+# Form implementation generated from reading ui file 'c:\Users\hampu\Desktop\D@IE\DTS2AC3\Ui_DTS2AC3.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -18,7 +18,7 @@ class Ui_MainWindow(object):
         MainWindow.setMinimumSize(QtCore.QSize(500, 300))
         MainWindow.setMaximumSize(QtCore.QSize(500, 300))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("icons/icon.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("c:\\Users\\hampu\\Desktop\\D@IE\\DTS2AC3\\icons/icon.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
         MainWindow.setAutoFillBackground(False)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
@@ -76,13 +76,3 @@ class Ui_MainWindow(object):
         self.pushButton.setText(_translate("MainWindow", "Convert"))
         self.pushButton_2.setText(_translate("MainWindow", "..."))
         self.pushButton_3.setText(_translate("MainWindow", "..."))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())

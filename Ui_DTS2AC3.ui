@@ -10,23 +10,42 @@
     <height>300</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>500</width>
+    <height>300</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>500</width>
+    <height>300</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>DTS2AC3</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icons/icon.svg</normaloff>icons/icon.svg</iconset>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>-10</y>
+      <x>130</x>
+      <y>0</y>
       <width>301</width>
       <height>111</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Roman</family>
-      <pointsize>50</pointsize>
+      <family>Bodoni MT Condensed</family>
+      <pointsize>70</pointsize>
      </font>
     </property>
     <property name="text">
@@ -76,7 +95,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>250</y>
+      <y>260</y>
       <width>471</width>
       <height>20</height>
      </rect>
@@ -90,7 +109,7 @@
      <rect>
       <x>460</x>
       <y>120</y>
-      <width>16</width>
+      <width>31</width>
       <height>21</height>
      </rect>
     </property>
@@ -103,7 +122,7 @@
      <rect>
       <x>460</x>
       <y>180</y>
-      <width>16</width>
+      <width>31</width>
       <height>21</height>
      </rect>
     </property>
@@ -138,7 +157,7 @@
      <x>0</x>
      <y>0</y>
      <width>500</width>
-     <height>18</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

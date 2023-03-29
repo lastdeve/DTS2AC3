@@ -1,3 +1,0 @@
-Make prettier UI
-Add icon
-Add cancel button

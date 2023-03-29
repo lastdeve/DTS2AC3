@@ -16,7 +16,7 @@ This GUI application is designed to convert DTS audio tracks within MKV files in
 
 ## Usage
 
-1. Run the program by executing the `DTS2AC3Converter.py` script.
+1. Run the program by executing the `Converter.py` script.
 2. Click the "Select Input File" button to choose the MKV file you want to convert.
 3. Click the "Select Output Directory" button to choose the directory where you want to save the converted file.
 4. Click the "Convert" button to start the conversion process.

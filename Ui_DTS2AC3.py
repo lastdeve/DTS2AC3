@@ -21,48 +21,74 @@ class Ui_MainWindow(object):
         icon.addPixmap(QtGui.QPixmap("icons/icon.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
         MainWindow.setAutoFillBackground(False)
+        MainWindow.setStyleSheet("QWidget {\n"
+"    background-color: rgb(25, 25, 25)\n"
+"}\n"
+"\n"
+"\n"
+"")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(130, 0, 301, 111))
+        self.label.setGeometry(QtCore.QRect(140, -10, 221, 91))
         font = QtGui.QFont()
         font.setFamily("Bodoni MT Condensed")
         font.setPointSize(70)
         self.label.setFont(font)
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(20, 100, 71, 16))
+        self.label_2.setGeometry(QtCore.QRect(210, 100, 101, 16))
+        self.label_2.setStyleSheet("font-weight: bold;")
         self.label_2.setObjectName("label_2")
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
-        self.label_3.setGeometry(QtCore.QRect(20, 160, 91, 16))
+        self.label_3.setGeometry(QtCore.QRect(200, 150, 111, 16))
+        self.label_3.setStyleSheet("font-weight: bold;")
         self.label_3.setObjectName("label_3")
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton.setGeometry(QtCore.QRect(180, 210, 141, 31))
+        self.pushButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.pushButton.setStyleSheet("QWidget{\n"
+"background: rgb(56, 56, 56);\n"
+"color: rgb(255, 255, 255);\n"
+"border-radius: 7px;\n"
+"}\n"
+"\n"
+"QWidget:hover {\n"
+"    color: rgb(255, 255, 255);\n"
+"    background: rgb(81, 81, 81)\n"
+"}")
         self.pushButton.setObjectName("pushButton")
         self.progressBar = QtWidgets.QProgressBar(self.centralwidget)
-        self.progressBar.setGeometry(QtCore.QRect(20, 260, 471, 20))
-        self.progressBar.setProperty("value", 24)
+        self.progressBar.setGeometry(QtCore.QRect(30, 260, 441, 21))
+        self.progressBar.setStyleSheet("QProgressBar {\n"
+"    border-radius: 5px;\n"
+"    background-color: rgb(25, 25, 25);\n"
+"    text-align: center;\n"
+"    color: white;\n"
+"    font-weight: bold;\n"
+"}\n"
+"\n"
+"QProgressBar::chunk {\n"
+"    background-color: rgb(207, 22, 25);\n"
+"    width: 20px\n"
+"}")
+        self.progressBar.setProperty("value", 100)
+        self.progressBar.setTextVisible(True)
         self.progressBar.setObjectName("progressBar")
-        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_2.setGeometry(QtCore.QRect(460, 120, 31, 21))
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_3.setGeometry(QtCore.QRect(460, 180, 31, 21))
-        self.pushButton_3.setObjectName("pushButton_3")
         self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit.setGeometry(QtCore.QRect(20, 120, 441, 20))
+        self.lineEdit.setGeometry(QtCore.QRect(20, 120, 451, 20))
         self.lineEdit.setObjectName("lineEdit")
         self.lineEdit_2 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_2.setGeometry(QtCore.QRect(20, 180, 441, 20))
+        self.lineEdit_2.setGeometry(QtCore.QRect(20, 170, 451, 20))
         self.lineEdit_2.setObjectName("lineEdit_2")
+        self.label.raise_()
+        self.label_2.raise_()
+        self.label_3.raise_()
+        self.pushButton.raise_()
+        self.lineEdit.raise_()
+        self.lineEdit_2.raise_()
+        self.progressBar.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 500, 21))
-        self.menubar.setObjectName("menubar")
-        MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -70,12 +96,10 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "DTS2AC3"))
-        self.label.setText(_translate("MainWindow", "DTS2AC3"))
-        self.label_2.setText(_translate("MainWindow", "Input MKV file:"))
-        self.label_3.setText(_translate("MainWindow", "Output directory:"))
+        self.label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">DTS2AC3</span></p></body></html>"))
+        self.label_2.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Input MKV file:</span></p></body></html>"))
+        self.label_3.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Output directory:</span></p></body></html>"))
         self.pushButton.setText(_translate("MainWindow", "Convert"))
-        self.pushButton_2.setText(_translate("MainWindow", "..."))
-        self.pushButton_3.setText(_translate("MainWindow", "..."))
 
 
 if __name__ == "__main__":

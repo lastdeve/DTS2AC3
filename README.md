@@ -25,3 +25,5 @@ This GUI application is designed to convert DTS audio tracks within MKV files in
 ## License
 
 This program is licensed under the MIT License. See the `LICENSE` file for details.
+
+UX by ReKd

@@ -1,0 +1,5 @@
+Make prettier UI
+Add icon
+Add cancel button
+
+Note: run UpdateUI.bat to generate a python UI file. (this is needed to run the Converter.py)

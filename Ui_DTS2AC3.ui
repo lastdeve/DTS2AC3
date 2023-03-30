@@ -38,42 +38,25 @@
 }
 
 
+
 </string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>-10</y>
-      <width>221</width>
-      <height>91</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Bodoni MT Condensed</family>
-      <pointsize>70</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;DTS2AC3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
       <x>210</x>
       <y>100</y>
-      <width>101</width>
+      <width>91</width>
       <height>16</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font-weight: bold;</string>
+     <string notr="true">font-weight: bold;
+background-color: transparent;</string>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Input MKV file:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Input MKV file :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
@@ -81,22 +64,23 @@
      <rect>
       <x>200</x>
       <y>150</y>
-      <width>111</width>
+      <width>101</width>
       <height>16</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font-weight: bold;</string>
+     <string notr="true">font-weight: bold;
+background-color: transparent;</string>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Output directory:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Output directory :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
       <x>180</x>
-      <y>210</y>
+      <y>220</y>
       <width>141</width>
       <height>31</height>
      </rect>
@@ -109,11 +93,16 @@
 background: rgb(56, 56, 56);
 color: rgb(255, 255, 255);
 border-radius: 7px;
+font-weight: bold;
 }
 
 QWidget:hover {
 	color: rgb(255, 255, 255);
 	background: rgb(81, 81, 81)
+}
+
+QPushButton::pressed {
+    background-color: rgb(56, 56, 56);
 }</string>
     </property>
     <property name="text">
@@ -131,16 +120,16 @@ QWidget:hover {
     </property>
     <property name="styleSheet">
      <string notr="true">QProgressBar {
-	border-radius: 5px;
-	background-color: rgb(25, 25, 25);
+	border: none;
+    background-color: transparent;
     text-align: center;
-	color: white;
+	color: rgb(255, 255, 255);
 	font-weight: bold;
 }
 
 QProgressBar::chunk {
-    background-color: rgb(207, 22, 25);
-    width: 20px
+	background-color: rgb(207, 22, 25);
+	border-radius: 7px;
 }</string>
     </property>
     <property name="value">
@@ -149,15 +138,27 @@ QProgressBar::chunk {
     <property name="textVisible">
      <bool>true</bool>
     </property>
+    <property name="format">
+     <string>%p.0%</string>
+    </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit">
     <property name="geometry">
      <rect>
       <x>20</x>
       <y>120</y>
-      <width>451</width>
+      <width>431</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>IBeamCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+border: 2px solid rgb(148, 148, 148);
+border-radius: 3px;
+</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_2">
@@ -165,20 +166,239 @@ QProgressBar::chunk {
      <rect>
       <x>20</x>
       <y>170</y>
-      <width>451</width>
+      <width>431</width>
       <height>20</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+border: 2px solid rgb(148, 148, 148);
+border-radius: 3px;
+</string>
+    </property>
    </widget>
-   <zorder>label</zorder>
+   <widget class="QCheckBox" name="checkBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>190</y>
+      <width>151</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="mouseTracking">
+     <bool>true</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+font-weight: bold;
+background-color: transparent;</string>
+    </property>
+    <property name="text">
+     <string>Save output directory</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>120</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget{
+background: rgb(56, 56, 56);
+color: rgb(255, 255, 255);
+text-align: top;
+border-radius: 3px;
+}
+
+QWidget:hover {
+	color: rgb(255, 255, 255);
+	background: rgb(81, 81, 81)
+}
+
+QPushButton::pressed {
+    background-color: rgb(56, 56, 56);
+}</string>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>170</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget{
+background: rgb(56, 56, 56);
+color: rgb(255, 255, 255);
+text-align: top;
+border-radius: 3px;
+}
+
+QWidget:hover {
+	color: rgb(255, 255, 255);
+	background: rgb(81, 81, 81)
+}
+
+QPushButton::pressed {
+    background-color: rgb(56, 56, 56);
+}</string>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>-10</y>
+      <width>141</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>48</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: transparent;</string>
+    </property>
+    <property name="text">
+     <string>DTS</string>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>20</y>
+      <width>41</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>48</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(207, 22, 25);
+background-color: transparent;</string>
+    </property>
+    <property name="text">
+     <string>2</string>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>-10</y>
+      <width>101</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>48</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: transparent;</string>
+    </property>
+    <property name="text">
+     <string>AC</string>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>-10</y>
+      <width>51</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>48</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: transparent;</string>
+    </property>
+    <property name="text">
+     <string>3</string>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+   </widget>
    <zorder>label_2</zorder>
    <zorder>label_3</zorder>
    <zorder>pushButton</zorder>
    <zorder>lineEdit</zorder>
    <zorder>lineEdit_2</zorder>
    <zorder>progressBar</zorder>
+   <zorder>checkBox</zorder>
+   <zorder>pushButton_2</zorder>
+   <zorder>pushButton_3</zorder>
+   <zorder>label</zorder>
+   <zorder>label_4</zorder>
+   <zorder>label_5</zorder>
+   <zorder>label_6</zorder>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="../../image.qrc"/>
+ </resources>
  <connections/>
 </ui>

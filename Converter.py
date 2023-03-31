@@ -31,7 +31,7 @@ class DTS2AC3Converter(QMainWindow, Ui_MainWindow):
         output_dir = self.lineEdit_2.text()
 
         if not input_file:
-            self.show_message_box("Please select input file.")
+            self.show_message_box("Please select the input file.")
             return
 
         if not output_dir:
@@ -57,7 +57,7 @@ class DTS2AC3Converter(QMainWindow, Ui_MainWindow):
         self.show_message_box("Conversion completed successfully.")
 
     def show_message_box(self, message):
-        QMessageBox.information(self, "DTS2AC3", message)
+        QMessageBox.warning(self, "DTS2AC3", message)
 
 
 class FFmpegThread(QThread):

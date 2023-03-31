@@ -397,8 +397,6 @@ background-color: transparent;</string>
    <zorder>label_6</zorder>
   </widget>
  </widget>
- <resources>
-  <include location="../../image.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

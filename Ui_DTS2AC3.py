@@ -22,6 +22,7 @@ class Ui_MainWindow(object):
         MainWindow.setWindowIcon(icon)
         MainWindow.setAutoFillBackground(False)
         MainWindow.setStyleSheet("QWidget {\n"
+"    color: white;\n"
 "    background-color: rgb(25, 25, 25)\n"
 "}\n"
 "\n"
@@ -218,7 +219,6 @@ class Ui_MainWindow(object):
         self.label_4.setText(_translate("MainWindow", "2"))
         self.label_5.setText(_translate("MainWindow", "AC"))
         self.label_6.setText(_translate("MainWindow", "3"))
-import image_rc
 
 
 if __name__ == "__main__":

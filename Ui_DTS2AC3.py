@@ -23,7 +23,8 @@ class Ui_MainWindow(object):
         MainWindow.setAutoFillBackground(False)
         MainWindow.setStyleSheet("QWidget {\n"
 "    color: white;\n"
-"    background-color: rgb(25, 25, 25)\n"
+"    background-color: rgb(25, 25, 25);\n"
+"    text-align: center;\n"
 "}\n"
 "\n"
 "\n"
@@ -211,7 +212,7 @@ class Ui_MainWindow(object):
         self.label_2.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Input MKV file :</span></p></body></html>"))
         self.label_3.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Output directory :</span></p></body></html>"))
         self.pushButton.setText(_translate("MainWindow", "Convert"))
-        self.progressBar.setFormat(_translate("MainWindow", "%p.0%"))
+        self.progressBar.setFormat(_translate("MainWindow", "%p%"))
         self.checkBox.setText(_translate("MainWindow", "Save output directory"))
         self.pushButton_2.setText(_translate("MainWindow", "..."))
         self.pushButton_3.setText(_translate("MainWindow", "..."))

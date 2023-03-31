@@ -35,7 +35,8 @@
   <property name="styleSheet">
    <string notr="true">QWidget {
 	color: white;
-    background-color: rgb(25, 25, 25)
+    background-color: rgb(25, 25, 25);
+	text-align: center;
 }
 
 
@@ -140,7 +141,7 @@ QProgressBar::chunk {
      <bool>true</bool>
     </property>
     <property name="format">
-     <string>%p.0%</string>
+     <string>%p%</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit">

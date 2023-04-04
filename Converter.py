@@ -1,6 +1,7 @@
 import os
 import time
 import sys
+import json
 import subprocess
 from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog, QMessageBox
 from PyQt5.QtCore import Qt, QThread, pyqtSignal
@@ -11,13 +12,27 @@ os.environ['QT_AUTO_SCREEN_SCALE_FACTOR'] = '1'
 class DTS2AC3Converter(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
+        # Load JSON file
+        with open("config.json", "r") as f:
+            try:
+                config = json.load(f)
+            except json.JSONDecodeError:
+                self.show_message_box("Error: Invalid JSON format in config file.")
+                exit()
+        # Check if JSON is empty or deprecated
+        if not config or "output_dir" not in config:
+            self.show_message_box("Error: Invalid config file format.")
+            exit()
+        # Get output directory from JSON
+        self.output_dir = config["output_dir"]
+        # Initialize UI elements
         self.setupUi(self)
         self.progressBar.setValue(0)
+        self.lineEdit_2.setText(self.output_dir)
         self.pushButton.clicked.connect(self.convert)
         self.pushButton_2.clicked.connect(self.select_input_file)
         self.pushButton_3.clicked.connect(self.select_output_dir)
         
-
     def select_input_file(self):
         file_path, _ = QFileDialog.getOpenFileName(self, "Select Input MKV File", "", "MKV Files (*.mkv)")
         if file_path:
@@ -39,6 +54,12 @@ class DTS2AC3Converter(QMainWindow, Ui_MainWindow):
         if not output_dir:
             self.show_message_box("Please select output directory.")
             return
+        
+         # Write new output directory to JSON file if checkbox is checked
+        if self.checkBox.isChecked():
+            with open('config.json', 'w') as f:
+                config = {'output_dir': output_dir}
+                json.dump(config, f)
 
         output_file = os.path.join(output_dir, os.path.basename(input_file))
 

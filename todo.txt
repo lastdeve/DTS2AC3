@@ -1,7 +1,6 @@
-Make prettier UI
-Add icon
-Add cancel button
+Add icon ti main process
+Add label for status of conversion
+Fix bug that triggers success after canceling
+Add MacOS/Linux support for canceling
 
-Note: run UpdateUI.bat to generate a python UI file. (this is needed to run the Converter.py)
-
-'image_rc' is missing?
+Note: run UpdateUI.bat to generate new python UI file

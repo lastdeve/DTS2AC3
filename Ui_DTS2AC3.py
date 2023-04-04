@@ -43,7 +43,7 @@ class Ui_MainWindow(object):
 "background-color: transparent;")
         self.label_3.setObjectName("label_3")
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(180, 220, 141, 31))
+        self.pushButton.setGeometry(QtCore.QRect(180, 210, 141, 31))
         self.pushButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.pushButton.setStyleSheet("QWidget{\n"
 "background: rgb(56, 56, 56);\n"
@@ -62,7 +62,7 @@ class Ui_MainWindow(object):
 "}")
         self.pushButton.setObjectName("pushButton")
         self.progressBar = QtWidgets.QProgressBar(self.centralwidget)
-        self.progressBar.setGeometry(QtCore.QRect(30, 260, 441, 21))
+        self.progressBar.setGeometry(QtCore.QRect(30, 255, 441, 21))
         self.progressBar.setStyleSheet("QProgressBar {\n"
 "    border: none;\n"
 "    background-color: transparent;\n"
@@ -188,6 +188,13 @@ class Ui_MainWindow(object):
 "background-color: transparent;")
         self.label_6.setScaledContents(False)
         self.label_6.setObjectName("label_6")
+        self.converting = QtWidgets.QLabel(self.centralwidget)
+        self.converting.setGeometry(QtCore.QRect(215, 280, 101, 16))
+        self.converting.setStyleSheet("font-size: 12px;\n"
+"font-weight: bold;\n"
+"color: green;\n"
+"background-color: transparent;")
+        self.converting.setObjectName("converting")
         self.label_2.raise_()
         self.label_3.raise_()
         self.pushButton.raise_()
@@ -201,6 +208,7 @@ class Ui_MainWindow(object):
         self.label_4.raise_()
         self.label_5.raise_()
         self.label_6.raise_()
+        self.converting.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -220,6 +228,7 @@ class Ui_MainWindow(object):
         self.label_4.setText(_translate("MainWindow", "2"))
         self.label_5.setText(_translate("MainWindow", "AC"))
         self.label_6.setText(_translate("MainWindow", "3"))
+        self.converting.setText(_translate("MainWindow", "converting..."))
 
 
 if __name__ == "__main__":

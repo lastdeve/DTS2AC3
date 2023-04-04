@@ -1,3 +1,6 @@
+# ⚠️ NOTICE!
+Please note that the software has only been tested on Windows and may not work properly on macOS or Linux. Features such as canceling the conversion may not work on any other OS that Windows as of now
+
 # DTS2AC3
 
 This GUI application is intended to simplify the process of converting DTS audio tracks within MKV (Matroska) files into AC3 audio tracks. This conversion process is accomplished by leveraging the FFmpeg library, which is a popular and powerful software framework for handling multimedia data.

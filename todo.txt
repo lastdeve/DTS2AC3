@@ -2,5 +2,6 @@ Add icon ti main process
 Add label for status of conversion
 Fix bug that triggers success after canceling
 Add MacOS/Linux support for canceling
+Package to exe
 
 Note: run UpdateUI.bat to generate new python UI file

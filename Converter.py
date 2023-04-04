@@ -1,4 +1,5 @@
 import os
+import time
 import sys
 import subprocess
 from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog, QMessageBox
@@ -15,6 +16,7 @@ class DTS2AC3Converter(QMainWindow, Ui_MainWindow):
         self.pushButton.clicked.connect(self.convert)
         self.pushButton_2.clicked.connect(self.select_input_file)
         self.pushButton_3.clicked.connect(self.select_output_dir)
+        
 
     def select_input_file(self):
         file_path, _ = QFileDialog.getOpenFileName(self, "Select Input MKV File", "", "MKV Files (*.mkv)")
@@ -42,6 +44,21 @@ class DTS2AC3Converter(QMainWindow, Ui_MainWindow):
 
         command = f"ffmpeg -i \"{input_file}\" -c:v copy -c:a ac3 \"{output_file}\""
         self.run_command(command)
+        self.pushButton.setText("Cancel")
+        self.pushButton.clicked.connect(self.handle_button_click)
+
+
+    def handle_button_click(self):
+        if self.pushButton.text() == "Cancel":
+            self.pushButton.setText("Canceling...")
+            current_dir = os.getcwd()
+            batch_file_path = os.path.join(current_dir, 'cancel.bat')
+            subprocess.call(batch_file_path)
+            time.sleep(3)
+            QMessageBox.information(self, "Button Clicked", "Conversion canceled")
+            self.progressBar.setValue(0)
+            self.pushButton.setText("Convert")
+
 
     def run_command(self, command):
         self.thread = FFmpegThread(command)
@@ -49,6 +66,7 @@ class DTS2AC3Converter(QMainWindow, Ui_MainWindow):
         self.thread.finished.connect(self.on_finished)
         self.thread.start()
 
+    
     def update_progress(self, value):
         self.progressBar.setValue(value)
 

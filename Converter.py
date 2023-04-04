@@ -28,6 +28,7 @@ class DTS2AC3Converter(QMainWindow, Ui_MainWindow):
         # Initialize UI elements
         self.setupUi(self)
         self.progressBar.setValue(0)
+        self.progressBar.setVisible(False)
         self.lineEdit_2.setText(self.output_dir)
         self.pushButton.clicked.connect(self.convert)
         self.pushButton_2.clicked.connect(self.select_input_file)
@@ -66,6 +67,7 @@ class DTS2AC3Converter(QMainWindow, Ui_MainWindow):
         command = f"ffmpeg -i \"{input_file}\" -c:v copy -c:a ac3 \"{output_file}\""
         self.run_command(command)
         self.pushButton.setText("Cancel")
+        self.progressBar.setVisible(True)
         self.pushButton.clicked.connect(self.handle_button_click)
 
 
@@ -93,7 +95,13 @@ class DTS2AC3Converter(QMainWindow, Ui_MainWindow):
 
     def on_finished(self):
         self.progressBar.setValue(100)
+        self.pushButton.setText("Resetting...")
         self.show_message_box("Conversion completed successfully.")
+        time.sleep(3)
+        self.progressBar.setValue(0)
+        self.progressBar.setVisible(False)
+        self.pushButton.setText("Convert")
+        
 
     def show_message_box(self, message):
         QMessageBox.warning(self, "DTS2AC3", message)

@@ -116,42 +116,43 @@ class DTS2AC3Converter(QMainWindow, Ui_MainWindow):
 
     def update_progress(self, value):
         self.progressBar.setValue(value)
-
+    
     def on_finished(self):
-        self.progressBar.setValue(100)
-        self.pushButton.setText("Resets...")
-        self.converting.setText("Please wait...")
-        QMessageBox.information(
-            self, "Conversion complete", "Conversion completed successfully")
-        time.sleep(3)
-        # Initialize UI elements
+        if self.pushButton.text() == "cancel":
+            self.progressBar.setValue(100)
+            self.pushButton.setText("Resets...")
+            self.converting.setText("Please wait...")
+            QMessageBox.information(
+                self, "Conversion complete", "Conversion completed successfully")
+            time.sleep(3)
+            # Initialize UI elements
 
-        def __init__(self):
-            super().__init__()
-        # Load JSON file
-        with open("config.json", "r") as f:
-            try:
-                config = json.load(f)
-            except json.JSONDecodeError:
-                self.show_message_box(
-                    "Error: Invalid JSON format in config file.")
+            def __init__(self):
+                super().__init__()
+            # Load JSON file
+            with open("config.json", "r") as f:
+                try:
+                    config = json.load(f)
+                except json.JSONDecodeError:
+                    self.show_message_box(
+                        "Error: Invalid JSON format in config file.")
+                    exit()
+            # Check if JSON is empty or deprecated
+            if not config or "output_dir" not in config:
+                self.show_message_box("Error: Invalid config file format.")
                 exit()
-        # Check if JSON is empty or deprecated
-        if not config or "output_dir" not in config:
-            self.show_message_box("Error: Invalid config file format.")
-            exit()
-        # Get output directory from JSON
-        self.output_dir = config["output_dir"]
-        # Initialize UI elements
-        self.setupUi(self)
-        self.progressBar.setValue(0)
-        self.progressBar.setVisible(False)
-        self.converting.setVisible(False)
-        self.lineEdit_2.setText(self.output_dir)
-        self.pushButton.clicked.connect(self.convert)
-        self.pushButton_2.clicked.connect(self.select_input_file)
-        self.pushButton_3.clicked.connect(self.select_output_dir)
-        self.pushButton.setText("Convert")
+            # Get output directory from JSON
+            self.output_dir = config["output_dir"]
+            # Initialize UI elements
+            self.setupUi(self)
+            self.progressBar.setValue(0)
+            self.progressBar.setVisible(False)
+            self.converting.setVisible(False)
+            self.lineEdit_2.setText(self.output_dir)
+            self.pushButton.clicked.connect(self.convert)
+            self.pushButton_2.clicked.connect(self.select_input_file)
+            self.pushButton_3.clicked.connect(self.select_output_dir)
+            self.pushButton.setText("Convert")
 
     def show_message_box(self, message):
         QMessageBox.warning(self, "DTS2AC3", message)

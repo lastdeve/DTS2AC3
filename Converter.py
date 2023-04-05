@@ -118,7 +118,7 @@ class DTS2AC3Converter(QMainWindow, Ui_MainWindow):
         self.progressBar.setValue(value)
     
     def on_finished(self):
-        if self.pushButton.text() == "cancel":
+        if self.pushButton.text() == "Cancel":
             self.progressBar.setValue(100)
             self.pushButton.setText("Resets...")
             self.converting.setText("Please wait...")

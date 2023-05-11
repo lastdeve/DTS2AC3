@@ -43,10 +43,14 @@ class Ui_MainWindow(object):
 "background-color: transparent;")
         self.label_3.setObjectName("label_3")
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(180, 220, 141, 31))
+        self.pushButton.setGeometry(QtCore.QRect(180, 210, 141, 31))
+        font = QtGui.QFont()
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton.setFont(font)
         self.pushButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.pushButton.setStyleSheet("QWidget{\n"
-"background: rgb(56, 56, 56);\n"
+"background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 173, 0, 255), stop:1 rgba(255, 54, 0, 255));\n"
 "color: rgb(255, 255, 255);\n"
 "border-radius: 7px;\n"
 "font-weight: bold;\n"
@@ -54,15 +58,15 @@ class Ui_MainWindow(object):
 "\n"
 "QWidget:hover {\n"
 "    color: rgb(255, 255, 255);\n"
-"    background: rgb(81, 81, 81)\n"
+"    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 227, 0, 255), stop:1 rgba(255, 54, 0, 255))\n"
 "}\n"
 "\n"
 "QPushButton::pressed {\n"
-"    background-color: rgb(56, 56, 56);\n"
+"    background-color:rgb(255, 115, 0);\n"
 "}")
         self.pushButton.setObjectName("pushButton")
         self.progressBar = QtWidgets.QProgressBar(self.centralwidget)
-        self.progressBar.setGeometry(QtCore.QRect(30, 260, 441, 21))
+        self.progressBar.setGeometry(QtCore.QRect(30, 255, 441, 21))
         self.progressBar.setStyleSheet("QProgressBar {\n"
 "    border: none;\n"
 "    background-color: transparent;\n"
@@ -72,7 +76,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QProgressBar::chunk {\n"
-"    background-color: rgb(207, 22, 25);\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 129, 0, 255), stop:1 rgba(255, 0, 0, 255));\n"
 "    border-radius: 7px;\n"
 "}")
         self.progressBar.setProperty("value", 100)
@@ -153,14 +157,14 @@ class Ui_MainWindow(object):
         self.label.setScaledContents(False)
         self.label.setObjectName("label")
         self.label_4 = QtWidgets.QLabel(self.centralwidget)
-        self.label_4.setGeometry(QtCore.QRect(230, 20, 41, 61))
+        self.label_4.setGeometry(QtCore.QRect(230, 25, 41, 61))
         font = QtGui.QFont()
         font.setFamily("Arial Black")
         font.setPointSize(48)
         font.setBold(True)
         font.setWeight(75)
         self.label_4.setFont(font)
-        self.label_4.setStyleSheet("color: rgb(207, 22, 25);\n"
+        self.label_4.setStyleSheet("color: rgb(255, 67, 10);\n"
 "background-color: transparent;")
         self.label_4.setScaledContents(False)
         self.label_4.setObjectName("label_4")
@@ -188,6 +192,25 @@ class Ui_MainWindow(object):
 "background-color: transparent;")
         self.label_6.setScaledContents(False)
         self.label_6.setObjectName("label_6")
+        self.converting = QtWidgets.QLabel(self.centralwidget)
+        self.converting.setGeometry(QtCore.QRect(215, 280, 101, 16))
+        self.converting.setStyleSheet("font-size: 12px;\n"
+"font-weight: bold;\n"
+"color: green;\n"
+"background-color: transparent;")
+        self.converting.setObjectName("converting")
+        self.label_7 = QtWidgets.QLabel(self.centralwidget)
+        self.label_7.setGeometry(QtCore.QRect(230, 20, 41, 61))
+        font = QtGui.QFont()
+        font.setFamily("Arial Black")
+        font.setPointSize(48)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_7.setFont(font)
+        self.label_7.setStyleSheet("color: rgb(255, 171, 3);\n"
+"background-color: transparent;")
+        self.label_7.setScaledContents(False)
+        self.label_7.setObjectName("label_7")
         self.label_2.raise_()
         self.label_3.raise_()
         self.pushButton.raise_()
@@ -201,6 +224,8 @@ class Ui_MainWindow(object):
         self.label_4.raise_()
         self.label_5.raise_()
         self.label_6.raise_()
+        self.converting.raise_()
+        self.label_7.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -220,6 +245,8 @@ class Ui_MainWindow(object):
         self.label_4.setText(_translate("MainWindow", "2"))
         self.label_5.setText(_translate("MainWindow", "AC"))
         self.label_6.setText(_translate("MainWindow", "3"))
+        self.converting.setText(_translate("MainWindow", "converting..."))
+        self.label_7.setText(_translate("MainWindow", "2"))
 
 
 if __name__ == "__main__":

@@ -87,12 +87,18 @@ background-color: transparent;</string>
       <height>31</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
      <string notr="true">QWidget{
-background: rgb(56, 56, 56);
+background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 173, 0, 255), stop:1 rgba(255, 54, 0, 255));
 color: rgb(255, 255, 255);
 border-radius: 7px;
 font-weight: bold;
@@ -100,11 +106,11 @@ font-weight: bold;
 
 QWidget:hover {
 	color: rgb(255, 255, 255);
-	background: rgb(81, 81, 81)
+	background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 227, 0, 255), stop:1 rgba(255, 54, 0, 255))
 }
 
 QPushButton::pressed {
-    background-color: rgb(56, 56, 56);
+    background-color:rgb(255, 115, 0);
 }</string>
     </property>
     <property name="text">
@@ -130,7 +136,7 @@ QPushButton::pressed {
 }
 
 QProgressBar::chunk {
-	background-color: rgb(207, 22, 25);
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 129, 0, 255), stop:1 rgba(255, 0, 0, 255));
 	border-radius: 7px;
 }</string>
     </property>
@@ -304,7 +310,7 @@ background-color: transparent;</string>
     <property name="geometry">
      <rect>
       <x>230</x>
-      <y>20</y>
+      <y>25</y>
       <width>41</width>
       <height>61</height>
      </rect>
@@ -318,7 +324,7 @@ background-color: transparent;</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(207, 22, 25);
+     <string notr="true">color: rgb(255, 67, 10);
 background-color: transparent;</string>
     </property>
     <property name="text">
@@ -403,6 +409,34 @@ background-color: transparent;</string>
      <string>converting...</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>20</y>
+      <width>41</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>48</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 171, 3);
+background-color: transparent;</string>
+    </property>
+    <property name="text">
+     <string>2</string>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+   </widget>
    <zorder>label_2</zorder>
    <zorder>label_3</zorder>
    <zorder>pushButton</zorder>
@@ -417,6 +451,7 @@ background-color: transparent;</string>
    <zorder>label_5</zorder>
    <zorder>label_6</zorder>
    <zorder>converting</zorder>
+   <zorder>label_7</zorder>
   </widget>
  </widget>
  <resources/>

@@ -284,7 +284,7 @@ QPushButton::pressed {
       <x>80</x>
       <y>-10</y>
       <width>141</width>
-      <height>101</height>
+      <height>120</height>
      </rect>
     </property>
     <property name="font">
@@ -296,7 +296,7 @@ QPushButton::pressed {
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);
+     <string notr="true">color: rgb(17, 17, 17);
 background-color: transparent;</string>
     </property>
     <property name="text">
@@ -338,53 +338,25 @@ background-color: transparent;</string>
     <property name="geometry">
      <rect>
       <x>280</x>
-      <y>-10</y>
-      <width>101</width>
-      <height>101</height>
+      <y>-7</y>
+      <width>151</width>
+      <height>111</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Arial Black</family>
-      <pointsize>48</pointsize>
+      <pointsize>50</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);
+     <string notr="true">color: rgb(17, 17, 17);
 background-color: transparent;</string>
     </property>
     <property name="text">
-     <string>AC</string>
-    </property>
-    <property name="scaledContents">
-     <bool>false</bool>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_6">
-    <property name="geometry">
-     <rect>
-      <x>380</x>
-      <y>-10</y>
-      <width>51</width>
-      <height>101</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Arial Black</family>
-      <pointsize>48</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);
-background-color: transparent;</string>
-    </property>
-    <property name="text">
-     <string>3</string>
+     <string>AC3</string>
     </property>
     <property name="scaledContents">
      <bool>false</bool>
@@ -437,6 +409,62 @@ background-color: transparent;</string>
      <bool>false</bool>
     </property>
    </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>-10</y>
+      <width>141</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>48</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: transparent;</string>
+    </property>
+    <property name="text">
+     <string>DTS</string>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>-10</y>
+      <width>145</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>48</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: transparent;</string>
+    </property>
+    <property name="text">
+     <string>AC3</string>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+   </widget>
    <zorder>label_2</zorder>
    <zorder>label_3</zorder>
    <zorder>pushButton</zorder>
@@ -449,9 +477,10 @@ background-color: transparent;</string>
    <zorder>label</zorder>
    <zorder>label_4</zorder>
    <zorder>label_5</zorder>
-   <zorder>label_6</zorder>
    <zorder>converting</zorder>
    <zorder>label_7</zorder>
+   <zorder>label_8</zorder>
+   <zorder>label_6</zorder>
   </widget>
  </widget>
  <resources/>

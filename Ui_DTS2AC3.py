@@ -79,7 +79,7 @@ class Ui_MainWindow(object):
 "    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 129, 0, 255), stop:1 rgba(255, 0, 0, 255));\n"
 "    border-radius: 7px;\n"
 "}")
-        self.progressBar.setProperty("value", 100)
+        self.progressBar.setProperty("value", 0)
         self.progressBar.setTextVisible(True)
         self.progressBar.setObjectName("progressBar")
         self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)

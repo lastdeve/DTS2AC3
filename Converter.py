@@ -91,9 +91,7 @@ class DTS2AC3Converter(QMainWindow, Ui_MainWindow):
         if self.pushButton.text() == "Cancel":
             self.pushButton.setText("Canceling...")
             self.converting.setText("Terminating...")
-            current_dir = os.getcwd()
-            batch_file_path = os.path.join(current_dir, 'cancel.bat')
-            subprocess.call(batch_file_path)
+            os.system("TASKKILL /F /IM ffmpeg.exe")
             time.sleep(3)
             QMessageBox.information(
                 self, "Button Clicked", "Conversion canceled")
@@ -120,13 +118,14 @@ class DTS2AC3Converter(QMainWindow, Ui_MainWindow):
     def on_finished(self):
         if self.pushButton.text() == "Cancel":
             self.progressBar.setValue(100)
-            self.pushButton.setText("Resets...")
+            self.pushButton.setText("Restoring...")
             self.converting.setText("Please wait...")
             QMessageBox.information(
                 self, "Conversion complete", "Conversion completed successfully")
             time.sleep(3)
-            # Initialize UI elements
 
+
+            # Initialize UI elements
             def __init__(self):
                 super().__init__()
             # Load JSON file
